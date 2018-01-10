@@ -1,11 +1,8 @@
 # anydoor
 Tiny NodeJS Static Web server
-<<<<<<< HEAD
-=======
 
 
 
 
-# 老王外遇
+# 老王外遇11111111111111111111
 .editorconfig哟
->>>>>>> enter
