@@ -1,6 +1,6 @@
 <<<<<<< HEAD
 module.exports = {
-
+asd
 };
 =======
 // module.exports = {
