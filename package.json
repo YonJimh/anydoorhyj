@@ -1,4 +1,16 @@
 {
+    "name": "anydoor",
+    "version": "1.0.0",
+    "description": "2233",
+    "main": "index.js",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/yongjian-h/anydoor.git"
+    },
+    "bugs": {
+      "url": "https://github.com/yongjian-h/anydoor.git"
+    },
+    "homepage": "https://github.com/yongjian-h/anydoor.git",
     "scripts": {
         "lint": "eslint .",
         "fix": "eslint --fix ."
@@ -7,10 +19,6 @@
         "fix",
         "lint"
     ],
-    "name": "123",
-    "version": "1.1.1",
-    "description": "ERROR: No README.md file found!",
-    "main": "index.js",
     "dependencies": {},
     "devDependencies": {
         "pre-commit": "^1.2.2",
