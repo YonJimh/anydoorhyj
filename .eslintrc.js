@@ -1,8 +1,8 @@
-<<<<<<< HEAD
+
 module.exports = {
 
 };
-=======
+
 // module.exports = {
 //     "env": {
 //         "browser": true,
@@ -29,4 +29,7 @@ module.exports = {
 //         ]
 //     }
 // };
+<<<<<<< HEAD
+>>>>>>> parent of c504601... 老王
+=======
 >>>>>>> parent of c504601... 老王
