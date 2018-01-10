@@ -11,14 +11,14 @@
       "url": "https://github.com/yongjian-h/anydoor.git"
     },
     "homepage": "https://github.com/yongjian-h/anydoor.git",
-    "scripts": {
-        "lint": "eslint .",
-        "fix": "eslint --fix ."
-    },
     "pre-commit": [
         "fix",
         "lint"
     ],
+    "scripts": {
+        "lint": "eslint .",
+        "fix": "eslint --fix ."
+    },
     "dependencies": {},
     "devDependencies": {
         "pre-commit": "^1.2.2",
