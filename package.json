@@ -4,11 +4,9 @@
     "description": "2233",
     "main": "index.js",
     "repository": {
-      "type": "git",
-      "url": "https://github.com/yongjian-h/anydoor.git"
+        "type": "git",
+        "url": "https://github.com/yongjian-h/anydoor.git"
     },
-
-
     "scripts": {
         "lint": "eslint .",
         "fix": "eslint --fix ."
@@ -19,12 +17,12 @@
     ],
     "bugs": {
         "url": "https://github.com/yongjian-h/anydoor.git"
-      },
-      "homepage": "https://github.com/yongjian-h/anydoor.git",
+    },
+    "homepage": "https://github.com/yongjian-h/anydoor.git",
     "dependencies": {},
     "devDependencies": {
-        "pre-commit": "^1.2.2",
         "babel-eslint": "^8.2.1",
-        "eslint": "^4.15.0"
+        "eslint": "^4.15.0",
+        "pre-commit": "^1.2.2"
     }
 }
