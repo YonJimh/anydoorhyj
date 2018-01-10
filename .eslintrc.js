@@ -1,8 +1,8 @@
-<<<<<<< HEAD
+
 module.exports = {
 asd
 };
-=======
+
 // module.exports = {
 //     "env": {
 //         "browser": true,
@@ -29,22 +29,3 @@ asd
 //         ]
 //     }
 // };
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> parent of c504601... 老王
-=======
->>>>>>> parent of c504601... 老王
-=======
-=======
->>>>>>> parent of 02b724d... Revert "老王"
-=======
->>>>>>> parent of 02b724d... Revert "老王"
-=======
->>>>>>> parent of 02b724d... Revert "老王"
-=======
->>>>>>> parent of 02b724d... Revert "老王"
->>>>>>> parent of c504601... 老王
