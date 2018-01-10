@@ -1,15 +1,16 @@
 {
     "scripts": {
         "lint": "eslint .",
-        "fix": "eslint --fix ."
+        "fix": "eslint --fix .",
+        "sss":"node -v"
     },
     "pre-commit": [
         "fix",
-        "lint"
+        "lint",
+        "sss"
     ],
     "dependencies": {},
     "devDependencies": {
-
-
+        "pre-commit": "^1.2.2"
     }
 }
