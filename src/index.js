@@ -1,5 +1,7 @@
+const http=require('http');
+const chalk=require('chalk');
+const conf=require('./config/defaultConfig');
 
-<<<<<<< HEAD
 const server = http.createServer((req , res)=>{
     // res.statusCode=233;
     // res.setHeader('Content-Type','text/html; charset=utf-8');
@@ -26,8 +28,6 @@ server.listen(conf.port,conf.hostname,()=>{
       const addr = `http://${conf.hostname}:${conf.port}`;
       console.info(`Server started at ${chalk.green(addr)}`);
 });
-=======
->>>>>>> parent of feb077d... asd
 
 // eslint-disable-next-line
 console.log(123);
