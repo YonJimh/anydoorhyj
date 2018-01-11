@@ -19,7 +19,10 @@
         "url": "https://github.com/yongjian-h/anydoor.git"
     },
     "homepage": "https://github.com/yongjian-h/anydoor.git",
-    "dependencies": {},
+    "dependencies": {
+        "chalk": "^2.3.0",
+        "handlebars": "^4.0.11"
+    },
     "devDependencies": {
         "babel-eslint": "^8.2.1",
         "eslint": "^4.15.0",
