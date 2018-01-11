@@ -28,6 +28,7 @@ server.listen(conf.port,conf.hostname,()=>{
       const addr = `http://${conf.hostname}:${conf.port}`;
       console.info(`Server started at ${chalk.green(addr)}`);
 });
+
 // eslint-disable-next-line
 console.log(123);
 
