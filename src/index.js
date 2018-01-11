@@ -27,6 +27,8 @@ server.listen(conf.port,conf.hostname,()=>{
       console.info(`Server started at ${chalk.green(addr)}`);
 });
 =======
+=======
+>>>>>>> parent of d2c1bf2... server
 
 // eslint-disable-next-line
 console.log(123);
@@ -37,4 +39,6 @@ console.log(123);
 // console.log(123);
 
 
+>>>>>>> parent of d2c1bf2... server
+=======
 >>>>>>> parent of d2c1bf2... server
