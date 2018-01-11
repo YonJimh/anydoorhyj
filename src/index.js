@@ -1,5 +1,4 @@
 
-
 const server = http.createServer((req , res)=>{
     // res.statusCode=233;
     // res.setHeader('Content-Type','text/html; charset=utf-8');
@@ -20,14 +19,6 @@ const server = http.createServer((req , res)=>{
     </html>
     `);
     res.end();
-});
-// sad
-server.listen(conf.port,conf.hostname,()=>{
-      const addr = `http://${conf.hostname}:${conf.port}`;
-      console.info(`Server started at ${chalk.green(addr)}`);
-});
-=======
-
 
 // eslint-disable-next-line
 console.log(123);
@@ -38,4 +29,3 @@ console.log(123);
 // console.log(123);
 
 
->>>>>>> parent of d2c1bf2... server
