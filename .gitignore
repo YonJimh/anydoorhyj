@@ -57,5 +57,4 @@ typings/
 # dotenv environment variables file
 .env
 *.js
-*.js
 src/index.js
