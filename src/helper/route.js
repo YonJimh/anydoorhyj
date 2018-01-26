@@ -1,4 +1,3 @@
-
 const fs=require('fs');
 const path=require('path');
 const Handlebars=require('handlebars');
@@ -6,8 +5,6 @@ const promisify=require('util').promisify;//将回调变一下
 const stat=promisify(fs.stat);
 const readdir=promisify(fs.readdir);
 const config=require('../config/defaultConfig');
-const mime=require('./mine');
-
 
 const tplPath=path.join(__dirname,'../template/dir.tpl');//拼成一个绝对地址
 const source=fs.readFileSync(tplPath);//这里可以用同步的方式
@@ -16,11 +13,9 @@ const template=Handlebars.compile(source.toString());  //传一个字符串参�
 module.exports=async function(req,res,filePath){
     try{
       const stats=await stat(filePath);
-
       if(stats.isFile()){
-        const contentType=mime(filePath);
         res.statusCode=200;
-        res.setHeader('Content-Type',contentType);
+        res.setHeader('Content-Type','text/html; charset=utf-8');
       /* fs.readFile(filePath,(err.data)=>{
         res.end(data);
       }) *///读取速度比较慢
@@ -41,7 +36,7 @@ module.exports=async function(req,res,filePath){
     }catch(ex){
       // console.error(ex);
       res.statusCode=404;
-      res.setHeader('Content-Type','text/plain');
+      res.setHeader('Content-Type','text/html; charset=utf-8');
       res.end(`${filePath} 找不到啊！${ex}`);
       // ${ex}
       return;

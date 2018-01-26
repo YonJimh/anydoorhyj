@@ -4,7 +4,7 @@ const path=require('path');
 const conf=require('./config/defaultConfig');
 const route=require('./helper/route');
 const server = http.createServer((req , res)=>{
-    let filePath=path.join(conf.root,decodeURI(req.url));//组成一个访问地址
+    let filePath=path.join(conf.root,req.url);//组成一个访问地址
     route(req,res,filePath);
     //res.statusCode=233;
     //res.setHeader('Content-Type','text/html; charset=utf-8');
