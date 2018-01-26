@@ -21,7 +21,9 @@
     "homepage": "https://github.com/yongjian-h/anydoor.git",
     "dependencies": {
         "chalk": "^2.3.0",
-        "handlebars": "^4.0.11"
+        "handlebars": "^4.0.11",
+        "string_decoder": "^1.0.3",
+        "supervisor": "^0.12.0"
     },
     "devDependencies": {
         "babel-eslint": "^8.2.1",
