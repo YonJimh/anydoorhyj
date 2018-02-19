@@ -18,7 +18,9 @@
 <body>
 {{#each files}}
 <!-- dir和files在同一个级别的 所以用../-->
-    <a href="{{../dir}}/{{this}}">{{this}}</a>
+<!-- <a href="{{../dir}}/{{this}}">{{this}}</a> -->
+
+    <a href="{{../dir}}/{{file}}">[{{icon}}]{{file}}</a>
 {{/each}}
 </body>
 </html>
