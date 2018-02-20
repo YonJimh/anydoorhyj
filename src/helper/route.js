@@ -5,16 +5,17 @@ const Handlebars=require('handlebars');
 const promisify=require('util').promisify;//将回调变一下
 const stat=promisify(fs.stat);
 const readdir=promisify(fs.readdir);
-const config=require('../config/defaultConfig');
+// const config=require('../config/defaultConfig');
 const mime=require('./mime');
 const compress=require('./compress');//解压缩
 const range=require('./range');//范围请求
+const isFresh=require('./cache');//缓存
 
 const tplPath=path.join(__dirname,'../template/dir.tpl');//拼成一个绝对地址
 const source=fs.readFileSync(tplPath);//这里可以用同步的方式
 const template=Handlebars.compile(source.toString());  //传一个字符串参数初始化
 
-module.exports=async function(req,res,filePath){
+module.exports=async function(req,res,filePath,config){
     try{
       const stats=await stat(filePath);
 
@@ -22,6 +23,12 @@ module.exports=async function(req,res,filePath){
         const contentType=mime(filePath);
         res.statusCode=200;
         res.setHeader('Content-Type',contentType);
+
+        if(isFresh(stats,req,res)){  //缓存验证
+          res.statusCode=304;
+          res.end(`111`);
+          return;
+        }
       /* fs.readFile(filePath,(err.data)=>{
         res.end(data);
       }) *///读取速度比较慢
@@ -38,6 +45,7 @@ module.exports=async function(req,res,filePath){
         rs=compress(rs,req,res);
       }
       rs.pipe(res);
+
       }else if(stats.isDirectory()){
         const files=await readdir(filePath);
 

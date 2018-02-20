@@ -1,40 +1,27 @@
-const http=require('http');
-const chalk=require('chalk');
-const conf=require('./config/defaultConfig');
+const yargs = require('yargs');
+const Server = require('./app');
 
-const server = http.createServer((req , res)=>{
-    // res.statusCode=233;
-    // res.setHeader('Content-Type','text/html; charset=utf-8');
-    // res.setHeader('Content-Type','text/plain');
-    res.writeHead(233, {'Content-Type': 'text/html; charset=utf-8'});
-    res.write(`
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <title>Document</title>
-    </head>
-    <body>
-        123456453
-    </body>
-    </html>
-    `);
-    res.end();
-});
-// sad
-server.listen(conf.port,conf.hostname,()=>{
-      const addr = `http://${conf.hostname}:${conf.port}`;
-      console.info(`Server started at ${chalk.green(addr)}`);
-});
+const argv = yargs
+.usage('angwhere [options]')
+.option('p', {
+  alias:'port',
+  describe:'端口号',
+  default:2333
+})
+.option('h', {
+  alias:'hostname',
+  describe:'host',
+  default:'127.0.0.1'
+})
+.option('d', {
+  alias:'root',
+  describe:'root path',
+  default:process.cwd()
+})
+.version()
+.alias('v','version')
+.help()
+.argv;
 
-// eslint-disable-next-line
-console.log(123);
-
-// alert(11);
-
-// console.log(123);
-// console.log(123);
-
-
+const server =new Server(argv);
+server.start();
