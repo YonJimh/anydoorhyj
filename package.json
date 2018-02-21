@@ -3,8 +3,8 @@
     "version": "0.1.2",
     "description": "2233",
     "main": "src/app.js",
-    "bin":{
-        "anydoor":"bin/anydoor"
+    "bin": {
+        "anydoor": "bin/anydoor"
     },
     "repository": {
         "type": "git",
